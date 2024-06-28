@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>sueca online</title>
+</head>
+<body>
+    <h1>sueca online ebaa</h1>
+    <button onclick="suecada()">pescar carta</button>
+    <p id="mensagem"></p>
+    <br>
+    <p>Contador: <span id="contador">0</span></p>
+
+    <script>
+        var contador = 0;
+
+        var mensagens = [
+            "K - homens e sapatonas bebem",
+            "Q - mulheres e gays bebem",
+            "J - todos bebem",
+            "10 - regra geral",
+            "9 - pessoas adjacentes bebem",
+            "8 - banheiro",
+            "7 - dorminhoco/truco",
+            "6 - só perguntas?",
+            "5 - eu nunca pesadao +19",
+            "4 - cafofo",
+            "3 - verdade ou desafio",
+            "2 - escolha DUAS pessoas para beber OU UMA para beber duas vezes",
+            "A - escolha UMA pessoa para beber"
+        ];
+    
+        
+
+        function suecada() {
+            var indice = Math.floor(Math.random() * mensagens.length);
+            var elemento = document.getElementById("mensagem");
+            var elementoContador = document.getElementById("contador");
+            elemento.textContent = mensagens[indice];
+            contador++;
+            elementoContador.textContent = contador; 
+        }
+    </script>
+    
+</body>
+</html>
